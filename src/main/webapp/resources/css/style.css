@@ -1,0 +1,268 @@
+
+.header a, a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.header h1 {
+    letter-spacing: 4px;
+    font-size: 300%;
+    margin-top: 13%;
+}
+.header p{
+	color: white !important;
+	font-size: 90%;
+	letter-spacing: 3px;
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+    background-color: #346270;
+    color: #fff;
+}
+.nav-pills > li> a{
+color: white !important;
+}
+.nav-pills>li>a:hover {
+	background-color: #346270;
+}
+.navbar-inverse {
+    background-color: #1E1C5E;
+    padding: 1%;
+    border: 0;
+}
+.item, item:active{
+	height: 580px;
+}
+@media(max-width: 767px){
+	.nav-pills>li{
+		float: none;
+	}.nav-pills{
+		text-align: center;
+	}
+	.header h1 {
+    font-size: 194%;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.header p {
+    color: white !important;
+    font-size: 65%;
+    letter-spacing: 2px;
+    text-align: center;
+}
+}
+.clear{
+	clear: both;
+	width: 63px;
+}
+.wrapper{
+	min-height: 100%;
+	background-color: #fff;
+}
+html, body{
+	height: 100%;
+}
+footer{
+	color: #666;
+	   background-color: #1E1C5E;
+	padding: 17px 0 18px 0;
+	border-top: 1px solid black;
+}
+footer a{
+	color: #999;
+}
+footer a:hover{
+	color: #fff;
+}
+.movie_block{
+	border: 2px solid #dad7d5;
+	border-radius: 5px;
+	margin-left: 1%;
+	margin-top: 1%;
+}
+.movie_label{
+	text-align: center;
+}
+.panel-info>.panel-heading{
+background-color: #1E1C5E;
+color: white;
+border-color: transparent;
+}
+.btn-warning {
+    color: #fff;
+    background-color: #1E1C5E;
+    border-color: #1E1C5E;
+}
+.btn-warning:hover {
+    color: #fff;
+    background-color: #346270;
+    border-color: #346270;
+}
+.player_photo{
+	height: 200px;
+	width: 150px;
+}
+.margin-8{
+	margin-bottom: 8px;
+}
+textarea.form-control{
+	height: 350px;
+}
+.badge{
+	background-color: red;
+	padding: 3px 3px;
+}
+.label.label-default{
+	margin-top: 22%;
+	background-color: #green;
+}
+#navbarCollapse ul li a.active{
+	background-color:red;
+}
+#navig ul li a:hover{
+	background-color:green;
+}
+.stat_nav>li>a{
+	background-color: #1E1C5E;
+}
+.stat_content{
+	background-color: #CBD8E6;
+	border: 1px solid gray;
+	height: auto;
+	min-height: 750px;
+	border-radius: 4px;
+}
+.add_tournament_div{
+	color: red;
+}
+.tournament_block{
+	background-color: #D5E2F0;
+	border-radius: 4px;
+	height: auto;
+	min-height: 80%;
+}
+
+.add_tournament{
+	color: white;
+	left: 60%;
+	background-color: #1E1C5E;
+	position: relative;
+	margin-top: 1%;
+	margin-bottom: 2%;
+}
+.manage_butons, .cup_title{
+	text-align: center;
+}
+.show_tournament{
+	text-decoration: none;
+	color: red;
+}
+.team_action_panel>li {
+	background-color: #EEEEEE;
+
+}
+
+.team_action_panel> li > a {
+	color: #2D2D2D !important;
+	font-size: 14px;
+}
+.team_action_panel>li>a:hover{
+	background-color: #0099FF;
+}
+.edit_player>input{
+	width: 1200px;
+}
+.navbar-form .form-control {
+	display: inline-block;
+	width: 228px;
+	vertical-align: middle;
+	margin-bottom: 1%;
+}
+.btn-default {
+	color: #ccc;
+	background-color: #1E1C5E;
+	border-color: #ccc;
+}
+.edit_form_block{
+	height: auto;
+}
+.tournament_image{
+	width: 25%;
+	height: 25%;
+}
+.btn-file{
+position: relative;
+	overflow: hidden;
+}
+.btn-file input[type=file]{
+	position: absolute;
+	min-width: 100%;
+	min-height: 100%;
+	opacity: 0;
+	outline: none;
+	background: #ffffff;
+	cursor: inherit;
+	display: block;
+	filter: alpha(opacity=0);
+}
+.user_photo{
+	width: 50%;
+	height: 50%;
+	border-radius: 4px;
+}
+.user_cabinet:hover{
+	border-bottom: 1px dashed #ffffff;
+}
+.error{
+	color:red;
+}
+.link_team:hover{
+	color: #000000;
+}
+.logout_link{
+	cursor: pointer;
+}
+
+.form-signin {
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+	margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+	font-weight: normal;
+}
+
+.form-signin .form-control {
+	position: relative;
+	height: auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px;
+	font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+	z-index: 2;
+}
+
+.form-signin input {
+	margin-top: 10px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.form-signin button {
+	margin-top: 10px;
+}
+
+.has-error {
+	color: red;
+}
+.hall_td{
+	width: 30%;
+}

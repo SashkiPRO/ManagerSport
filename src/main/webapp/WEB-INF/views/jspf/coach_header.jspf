@@ -1,0 +1,106 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
+<!-- /.navbar-header -->
+<ul class="nav navbar-nav navbar-right">
+
+  <li class="dropdown">
+    <a href="#" class="dropdown-toggle avatar" data-toggle="dropdown"><img src="ImageShow?type=user&id=${User.id}"> <span> <br> Welcome ${User.firstName}</span></a></a>
+    <ul class="dropdown-menu">
+
+      <li class="dropdown-menu-header text-center">
+        <strong>Settings</strong>
+      </li>
+
+      <c:forEach items="${User.roles}" var="role">
+        <c:if test="${role.name=='ROLE_ADMIN'}">
+          <li class="m_2"><a href="admin_cabinet"><i class="fa fa-user"></i> Profile (admin)</a></li>
+        </c:if>
+        <c:if test="${role.name=='ROLE_COACH'}">
+          <li class="m_2"><a href="coach_cabinet"><i class="fa fa-user"></i> Profile (coach)</a></li>
+        </c:if>
+      </c:forEach>
+
+      <li class="divider"></li>
+      <c:forEach items="${User.roles}" var="role">
+        <c:if test="${role.name=='ROLE_ADMIN'}">
+          <li class="m_2"><a href="edit_admin"><i class="glyphicon glyphicon-wrench"></i> Редактировать профиль</a></li>
+          <li class="m_2"><a href="change_password"><i class="glyphicon glyphicon-wrench"></i> Сменить пароль</a></li>
+          <li class="m_2"><a href="edit_avatar"><i class="glyphicon glyphicon-wrench"></i> Сменить аватар</a></li>
+        </c:if>
+        <c:if test="${role.name=='ROLE_COACH'}">
+          <li class="m_2"><a href="edit_coach"><i class="glyphicon glyphicon-wrench"></i> Редактировать профиль</a></li>
+          <li class="m_2"><a href="change_password_coach"><i class="glyphicon glyphicon-wrench"></i> Сменить пароль</a></li>
+          <li class="m_2"><a href="edit_avatar_coach"><i class="glyphicon glyphicon-wrench"></i> Сменить аватар</a></li>
+        </c:if>
+      </c:forEach>
+
+
+      <li class="divider"></li>
+
+      <c:if test="${pageContext.request.userPrincipal.name != null}">
+        <form id="logoutForm" method="POST" action="${contextPath}/logout">
+          <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+        </form>
+
+        <li class="m_2"><a class="logout_link" onclick="document.forms['logoutForm'].submit()"><i class="fa fa-lock"></i>Logout</a></li>
+
+
+      </c:if>
+    </ul>
+  </li>
+</ul>
+
+<div class="navbar-default sidebar" role="navigation">
+  <div class="sidebar-nav navbar-collapse">
+    <ul class="nav" id="side-menu">
+      <li>
+        <a href="coach_cabinet"><i class="fa fa-info fa-fw nav_icon"></i>Информация о пользователе</a>
+      </li>
+      <li>
+        <a style="cursor:pointer"><i class="fa fa-indent nav_icon"></i>События<span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level">
+          <li>
+            <a href="event_list">Все события</a>
+          </li>
+          <li>
+            <a href="add_event">Добавить событие</a>
+          </li>
+        </ul>
+        <!-- /.nav-second-level -->
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-envelope nav_icon"></i>Статистика<span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level">
+          <li>
+            <a href="players_trainings">Посещение тренеровок</a>
+          </li>
+          <li>
+            <a href="players_games">Посещение игор</a>
+          </li>
+        </ul>
+
+      </li>
+
+
+      <li>
+        <a href="#"><i class="fa fa-sitemap fa-fw nav_icon"></i>Настройки<span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level">
+          <li>
+            <a href="change_password_coach">Сменить пароль</a>
+          </li>
+          <li>
+            <a href="edit_user_coach">Редактировать профиль</a>
+          </li>
+          <li>
+            <a href="edit_avatar_coach">Сменить аватар</a>
+          </li>
+        </ul>
+        <!-- /.nav-second-level -->
+      </li>
+    </ul>
+  </div>
+  <!-- /.sidebar-collapse -->
+</div>
+<!-- /.navbar-static-side -->
+</nav>

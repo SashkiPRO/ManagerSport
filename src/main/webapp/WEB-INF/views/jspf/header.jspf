@@ -1,0 +1,90 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<div class="container-fluid">
+  		<div class="row">
+  			<nav role="navigation" class="navbar navbar-inverse">
+  				<div class="container">
+  					<div class="navbar-header header">
+  						<div class="container">
+  							<div class="row">
+  								<div class="col-lg-6">
+  									<h1><a href="#">mfc Ciklum</a></h1>
+  									<p>Forza Ciklum!</p>
+  								</div>
+  								<div class="col-lg-3  hidden-xs col-lg-pull-3">
+  									<img src="resources/images/cik.png">
+  								</div>
+  								<div class="col-lg-3">
+
+
+									<%--<a class="user_cabinet" href="statist_tournament">	<img src="ImageShow?type=user&id=${Sasha.id}" class="user_photo" >  								<p>	${user.firstName} ${user.lastName}</a></p>
+--%>
+									<ul class="nav navbar-nav navbar-right">
+
+										<li class="dropdown">
+											<a href="#" class="dropdown-toggle avatar" data-toggle="dropdown"><img src="ImageShow?type=user&id=${User.id}"> <span> <br> Welcome ${User.firstName}</span></a></a>
+											<ul class="dropdown-menu">
+
+												<li class="dropdown-menu-header text-center">
+													<strong>Settings</strong>
+												</li>
+
+												<c:forEach items="${User.roles}" var="role">
+													<c:if test="${role.name=='ROLE_ADMIN'}">
+														<li class="m_2"><a href="admin_cabinet"><i class="glyphicon glyphicon-user"></i> Profile (admin)</a></li>
+													</c:if>
+													<c:if test="${role.name=='ROLE_COACH'}">
+														<li class="m_2"><a href="coach_cabinet"><i class="glyphicon glyphicon-user"></i> Profile (coach)</a></li>
+													</c:if>
+													<c:if test="${role.name=='ROLE_PLAYER'}">
+														<li class="m_2"><a href="player_cabinet"><i class="glyphicon glyphicon-user"></i> Profile (player)</a></li>
+													</c:if>
+												</c:forEach>
+												
+												<li class="divider"></li>
+												<c:forEach items="${User.roles}" var="role">
+													<c:if test="${role.name=='ROLE_ADMIN'}">
+														<li class="m_2"><a href="edit_admin"><i class="glyphicon glyphicon-wrench"></i> Редактировать профиль</a></li>
+														<li class="m_2"><a href="change_password"><i class="glyphicon glyphicon-wrench"></i> Сменить пароль</a></li>
+														<li class="m_2"><a href="edit_avatar"><i class="glyphicon glyphicon-wrench"></i> Сменить аватар</a></li>
+													</c:if>
+													<c:if test="${role.name=='ROLE_COACH'}">
+														<li class="m_2"><a href="edit_user_coach"><i class="glyphicon glyphicon-wrench"></i> Редактировать профиль</a></li>
+														<li class="m_2"><a href="change_password_coach"><i class="glyphicon glyphicon-wrench"></i> Сменить пароль</a></li>
+														<li class="m_2"><a href="edit_avatar_coach"><i class="glyphicon glyphicon-wrench"></i> Сменить аватар</a></li>
+													</c:if>
+													<c:if test="${role.name=='ROLE_PLAYER'}">
+														<li class="m_2"><a href="edit_user_player"><i class="glyphicon glyphicon-wrench"></i> Редактировать профиль</a></li>
+														<li class="m_2"><a href="change_password_player"><i class="glyphicon glyphicon-wrench"></i> Сменить пароль</a></li>
+														<li class="m_2"><a href="edit_avatar_player"><i class="glyphicon glyphicon-wrench"></i> Сменить аватар</a></li>
+													</c:if>
+												</c:forEach>
+
+
+												<li class="divider"></li>
+												<c:if test="${pageContext.request.userPrincipal.name != null}">
+													<form id="logoutForm" method="POST" action="${contextPath}/logout">
+														<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+													</form>
+
+												<li class="m_2"><a class="logout_link" onclick="document.forms['logoutForm'].submit()"><i class="glyphicon glyphicon-off"></i>Logout</a></li>
+
+
+												</c:if>
+
+											</ul>
+										</li>
+									</ul>
+
+
+								</div>
+  							</div>
+  						</div>
+  						<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+  							<span class="sr-only">Toggle navigation</span>
+  							<span class="icon-bar"></span>
+  							<span class="icon-bar"></span>
+  							<span class="icon-bar"></span>
+  						</button>
+  					</div>
+  				

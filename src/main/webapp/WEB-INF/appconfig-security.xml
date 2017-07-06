@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/security
+		http://www.springframework.org/schema/security/spring-security.xsd">
+
+    <http auto-config="true">
+        <intercept-url pattern="/" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')"/>
+        <intercept-url pattern="/index" access="hasAnyRole('ROLE_ADMIN, ROLE_COACH, ROLE_PLAYER, ROLE_ECONOMIST')"/>
+        <intercept-url pattern="/admin" access="hasRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="/players" access="hasRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="/admin_cabinet" access="hasRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="/createNewUser" access="hasRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="add_news" access="hasRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="/view_extras" access="hasRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="/view_players" access="hasRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="/view_coaches" access="hasRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="/view_economists" access="hasRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="/coach_cabinet" access="hasRole('ROLE_COACH')"/>
+        <intercept-url pattern="/add_event" access="hasRole('ROLE_COACH')"/>
+        <intercept-url pattern="/event_list" access="hasRole('ROLE_COACH')"/>
+        <intercept-url pattern="/participant_list" access="hasRole('ROLE_COACH')"/>
+        <intercept-url pattern="/participant_answer" access="hasRole('ROLE_COACH')"/>
+        <intercept-url pattern="/players_games" access="hasRole('ROLE_COACH')"/>
+        <intercept-url pattern="/players_trainings" access="hasRole('ROLE_COACH')"/>
+        <intercept-url pattern="/edit_user_coach" access="hasRole('ROLE_COACH')"/>
+        <intercept-url pattern="/change_password_coach" access="hasRole('ROLE_COACH')"/>
+        <intercept-url pattern="/edit_avatar_coach" access="hasRole('ROLE_COACH')"/>
+        <intercept-url pattern="/player_cabinet" access="hasRole('ROLE_PLAYER')"/>
+        <intercept-url pattern="/unanswered_events" access="hasRole('ROLE_PLAYER')"/>
+        <intercept-url pattern="/accept_event" access="hasRole('ROLE_PLAYER')"/>
+        <intercept-url pattern="/disagree_event" access="hasRole('ROLE_PLAYER')"/>
+        <intercept-url pattern="/edit_user_player" access="hasRole('ROLE_PLAYER')"/>
+        <intercept-url pattern="/edit_avatar_player" access="hasRole('ROLE_PLAYER')"/>
+        <intercept-url pattern="/player_events" access="hasRole('ROLE_PLAYER')"/>
+        <intercept-url pattern="/answer_page" access="hasRole('ROLE_PLAYER')"/>
+        <intercept-url pattern="/economist_cabinet" access="hasRole('ROLE_ECONOMIST')"/>
+        <intercept-url pattern="/bank_state" access="hasRole('ROLE_ECONOMIST')"/>
+        <intercept-url pattern="/replenishment_view" access="hasRole('ROLE_ECONOMIST')"/>
+        <intercept-url pattern="/add_replenishment" access="hasRole('ROLE_ECONOMIST')"/>
+        <intercept-url pattern="/add_contract" access="hasRole('ROLE_ECONOMIST')"/>
+        <intercept-url pattern="/add_penalty" access="hasRole('ROLE_ECONOMIST')"/>
+        <intercept-url pattern="/penalty_list" access="hasRole('ROLE_ECONOMIST')"/>
+        <intercept-url pattern="/add_award" access="hasRole('ROLE_ECONOMIST')"/>
+        <intercept-url pattern="/award_list" access="hasRole('ROLE_ECONOMIST')"/>
+        <intercept-url pattern="/add_payment" access="hasRole('ROLE_ECONOMIST')"/>
+        <intercept-url pattern="/payments_list" access="hasRole('ROLE_ECONOMIST')"/>
+        <intercept-url pattern="/view_users" access="hasRole('ROLE_ECONOMIST')"/>
+        <intercept-url pattern="/view_contract" access="hasRole('ROLE_ECONOMIST')"/>
+        <intercept-url pattern="/edit_contract" access="hasRole('ROLE_ECONOMIST')"/>
+        <intercept-url pattern="/edit_economist" access="hasRole('ROLE_ECONOMIST')"/>
+        <intercept-url pattern="/change_password_economist" access="hasRole('ROLE_ECONOMIST')"/>
+        <intercept-url pattern="/edit_avatar_economist" access="hasRole('ROLE_ECONOMIST')"/>
+        <intercept-url pattern="/pay_salary" access="hasRole('ROLE_ECONOMIST')"/>
+
+        <form-login login-page="/login" default-target-url="/index"  authentication-failure-url="/login?error"
+                    username-parameter="username" password-parameter="password"/>
+
+        <logout logout-success-url="/login?logout"/>
+        <remember-me remember-me-cookie="true" remember-me-parameter="rememb"/>
+        <csrf disabled="true"/>
+    </http>
+
+    <authentication-manager alias="authenticationManager">
+        <authentication-provider user-service-ref="userDetailsServiceImpl">
+            <password-encoder ref="encoder"></password-encoder>
+        </authentication-provider>
+    </authentication-manager>
+
+    <beans:bean id="userDetailsServiceImpl"
+                class="net.proselyte.springsecurityapp.service.UserDetailsServiceImpl"></beans:bean>
+
+    <beans:bean id="encoder"
+                class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+        <beans:constructor-arg name="strength" value="11"/>
+    </beans:bean>
+</beans:beans>

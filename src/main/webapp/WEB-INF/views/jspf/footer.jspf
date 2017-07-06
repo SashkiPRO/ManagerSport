@@ -1,0 +1,22 @@
+<footer>
+	<div class="container">
+		<p class="text-center">
+			<a href="#">ciklum</a>
+		</p>
+	</div>
+	</footer>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-3.1.0.min.js"></script>
+
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/bootstrap.js"></script>
+
+
+
+
+
+
+
+		
+		
