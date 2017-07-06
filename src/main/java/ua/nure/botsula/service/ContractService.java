@@ -11,4 +11,5 @@ public interface ContractService {
     Contract findContractById(Long id);
     List<Contract> findAll();
     void save(Contract contract);
+    System.out.println();
 }
