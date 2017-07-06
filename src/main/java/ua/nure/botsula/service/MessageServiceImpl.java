@@ -1,11 +1,12 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.dao.MessageDao;
-import net.proselyte.springsecurityapp.model.Event;
-import net.proselyte.springsecurityapp.model.Message;
-import net.proselyte.springsecurityapp.model.User;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import ua.nure.botsula.dao.MessageDao;
+import ua.nure.botsula.model.Event;
+import ua.nure.botsula.model.Message;
+import ua.nure.botsula.model.User;
 
 import java.util.List;
 

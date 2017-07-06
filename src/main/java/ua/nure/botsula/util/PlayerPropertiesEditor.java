@@ -1,9 +1,9 @@
 package ua.nure.botsula.util;
 
-import net.proselyte.springsecurityapp.model.Player;
-import net.proselyte.springsecurityapp.service.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import ua.nure.botsula.model.Player;
+import ua.nure.botsula.service.PlayerService;
 
 import java.beans.PropertyEditorSupport;
 

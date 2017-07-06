@@ -1,9 +1,9 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.dao.TeamDao;
-import net.proselyte.springsecurityapp.model.Team;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import ua.nure.botsula.dao.TeamDao;
+import ua.nure.botsula.model.Team;
 
 import java.util.List;
 

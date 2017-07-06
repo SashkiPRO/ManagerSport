@@ -1,9 +1,10 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.dao.AwardDao;
-import net.proselyte.springsecurityapp.model.Award;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import ua.nure.botsula.dao.AwardDao;
+import ua.nure.botsula.model.Award;
 
 import java.util.List;
 

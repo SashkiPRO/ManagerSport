@@ -1,9 +1,10 @@
 package ua.nure.botsula.util;
 
-import net.proselyte.springsecurityapp.model.Tour;
-import net.proselyte.springsecurityapp.model.TourService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import ua.nure.botsula.model.Tour;
+import ua.nure.botsula.model.TourService;
 
 import java.beans.PropertyEditorSupport;
 

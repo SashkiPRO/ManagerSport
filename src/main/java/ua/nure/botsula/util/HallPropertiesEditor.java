@@ -1,9 +1,10 @@
 package ua.nure.botsula.util;
 
-import net.proselyte.springsecurityapp.model.Hall;
-import net.proselyte.springsecurityapp.service.HallService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import ua.nure.botsula.model.Hall;
+import ua.nure.botsula.service.HallService;
 
 import java.beans.PropertyEditorSupport;
 

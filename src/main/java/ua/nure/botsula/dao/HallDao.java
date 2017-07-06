@@ -1,7 +1,8 @@
 package ua.nure.botsula.dao;
 
-import net.proselyte.springsecurityapp.model.Hall;
+
 import org.springframework.data.jpa.repository.JpaRepository;
+import ua.nure.botsula.model.Hall;
 
 /**
  * Created by Alexandr on 30.04.2017.

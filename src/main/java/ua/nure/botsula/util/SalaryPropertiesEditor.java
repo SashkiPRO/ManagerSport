@@ -1,9 +1,9 @@
 package ua.nure.botsula.util;
 
-import net.proselyte.springsecurityapp.model.Salary;
-import net.proselyte.springsecurityapp.service.SalaryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import ua.nure.botsula.model.Salary;
+import ua.nure.botsula.service.SalaryService;
 
 import java.beans.PropertyEditorSupport;
 

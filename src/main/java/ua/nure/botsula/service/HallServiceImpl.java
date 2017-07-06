@@ -1,9 +1,10 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.dao.HallDao;
-import net.proselyte.springsecurityapp.model.Hall;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import ua.nure.botsula.dao.HallDao;
+import ua.nure.botsula.model.Hall;
 
 import java.util.List;
 

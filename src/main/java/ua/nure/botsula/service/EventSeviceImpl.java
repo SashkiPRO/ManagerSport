@@ -1,9 +1,10 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.dao.EventDao;
-import net.proselyte.springsecurityapp.model.Event;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import ua.nure.botsula.dao.EventDao;
+import ua.nure.botsula.model.Event;
 
 import java.util.List;
 

@@ -1,6 +1,8 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.model.Tournament;
+
+
+import ua.nure.botsula.model.Tournament;
 
 import javax.validation.Valid;
 import java.util.List;

@@ -1,6 +1,8 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.model.News;
+
+
+import ua.nure.botsula.model.News;
 
 import java.util.List;
 

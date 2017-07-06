@@ -1,7 +1,8 @@
 package ua.nure.botsula.dao;
 
-import net.proselyte.springsecurityapp.model.Penalty;
+
 import org.springframework.data.jpa.repository.JpaRepository;
+import ua.nure.botsula.model.Penalty;
 
 /**
  * Created by Alexandr on 14.06.2017.

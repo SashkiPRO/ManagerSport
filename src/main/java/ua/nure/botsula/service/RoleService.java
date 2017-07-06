@@ -1,6 +1,8 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.model.Role;
+
+
+import ua.nure.botsula.model.Role;
 
 import java.util.List;
 

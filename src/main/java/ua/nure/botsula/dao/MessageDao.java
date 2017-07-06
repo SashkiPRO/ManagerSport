@@ -1,11 +1,12 @@
 package ua.nure.botsula.dao;
 
-import net.proselyte.springsecurityapp.model.Event;
-import net.proselyte.springsecurityapp.model.Message;
-import net.proselyte.springsecurityapp.model.User;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import ua.nure.botsula.model.Event;
+import ua.nure.botsula.model.Message;
+import ua.nure.botsula.model.User;
 
 import java.util.List;
 

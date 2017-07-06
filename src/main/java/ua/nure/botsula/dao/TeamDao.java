@@ -1,7 +1,8 @@
 package ua.nure.botsula.dao;
 
-import net.proselyte.springsecurityapp.model.Team;
+
 import org.springframework.data.jpa.repository.JpaRepository;
+import ua.nure.botsula.model.Team;
 
 /**
  * Created by Alexandr on 30.04.2017.

@@ -1,12 +1,5 @@
 package ua.nure.botsula.controller;
 
-import net.proselyte.springsecurityapp.model.*;
-import net.proselyte.springsecurityapp.service.HallService;
-import net.proselyte.springsecurityapp.service.TournamentService;
-import net.proselyte.springsecurityapp.util.HallPropertiesEditor;
-import net.proselyte.springsecurityapp.util.PropertiesEditor;
-import net.proselyte.springsecurityapp.util.TourPropertyEditor;
-import net.proselyte.springsecurityapp.util.TournamentPropertyEditor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +8,13 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
+import ua.nure.botsula.model.*;
+import ua.nure.botsula.service.HallService;
+import ua.nure.botsula.service.TournamentService;
+import ua.nure.botsula.util.HallPropertiesEditor;
+import ua.nure.botsula.util.PropertiesEditor;
+import ua.nure.botsula.util.TourPropertyEditor;
+import ua.nure.botsula.util.TournamentPropertyEditor;
 
 import javax.validation.Valid;
 import java.io.IOException;
@@ -75,25 +75,29 @@ public class TournamentContoller {
         return "redirect:/statist_tournament";
     }
 
-    @RequestMapping(value = "add_tour",method = RequestMethod.GET)
-    public @ResponseBody ModelAndView addTour(Model m ){
-        List<Tournament> tournaments =tournamentService.findAll();
-            m.addAttribute("newTour", new Tour());
+    @RequestMapping(value = "add_tour", method = RequestMethod.GET)
+    public
+    @ResponseBody
+    ModelAndView addTour(Model m) {
+        List<Tournament> tournaments = tournamentService.findAll();
+        m.addAttribute("newTour", new Tour());
         m.addAttribute("tournaments", tournaments);
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("statist/add_tour");
         return modelAndView;
     }
+
     @RequestMapping(value = "add_tour", method = RequestMethod.POST)
-    public String addTour(@ModelAttribute Tour newTour, Model model){
+    public String addTour(@ModelAttribute Tour newTour, Model model) {
         tourService.save(newTour);
         StringBuilder path = new StringBuilder();
         path.append("redirect:/tournament_show");
-        path.append("?id="+newTour.getTournament().getId());
+        path.append("?id=" + newTour.getTournament().getId());
         return path.toString().trim();
     }
+
     @RequestMapping(value = "tours_view", method = RequestMethod.GET)
-    public String toursList(Model model){
+    public String toursList(Model model) {
         List<Tour> tours = tourService.findAll();
         model.addAttribute("tours", tours);
         return "statist/tours_view";
@@ -122,14 +126,16 @@ public class TournamentContoller {
 
     @RequestMapping(value = "removeTournament", params = {"tournament_id"}, method = RequestMethod.GET)
     public
-    @ResponseBody ModelAndView removeTournament(Model m, @RequestParam(value = "tournament_id") String id){
+    @ResponseBody
+    ModelAndView removeTournament(Model m, @RequestParam(value = "tournament_id") String id) {
         Tournament tournament = tournamentService.findTournamentById(Long.parseLong(id));
         tourService.delete(tournament.getTours());
         tournamentService.remove(tournament);
-      ModelAndView modelAndView = new ModelAndView();
+        ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("redirect:/statist_tournament");
-       return modelAndView;
+        return modelAndView;
     }
+
     @RequestMapping(value = "add_match", method = RequestMethod.POST)
     public String addMatchClick(@ModelAttribute Game newGame, Model model) {
         gameService.save(newGame);

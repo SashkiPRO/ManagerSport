@@ -1,8 +1,5 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.dao.UserDao;
-import net.proselyte.springsecurityapp.model.Role;
-import net.proselyte.springsecurityapp.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -10,6 +7,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.transaction.annotation.Transactional;
+import ua.nure.botsula.dao.UserDao;
+import ua.nure.botsula.model.Role;
+import ua.nure.botsula.model.User;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -17,7 +17,7 @@ import java.util.Set;
 /**
  * Implementation of {@link org.springframework.security.core.userdetails.UserDetailsService} interface.
  *
- * @author Eugene Suleimanov
+ * @author Aleksandr Botsula
  * @version 1.0
  */
 

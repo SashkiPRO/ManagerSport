@@ -1,13 +1,14 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.model.User;
+
+import ua.nure.botsula.model.User;
 
 import java.util.List;
 
 /**
- * Service class for {@link net.proselyte.springsecurityapp.model.User}
+ * Service class for {@link ua.nure.botsula.model.User}
  *
- * @author Eugene Suleimanov
+ * @author Aleksandr Botsula
  * @version 1.0
  */
 

@@ -1,6 +1,8 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.model.Replenishment;
+
+
+import ua.nure.botsula.model.Replenishment;
 
 import java.util.List;
 

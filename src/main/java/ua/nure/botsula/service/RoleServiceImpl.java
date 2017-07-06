@@ -1,9 +1,10 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.dao.RoleDao;
-import net.proselyte.springsecurityapp.model.Role;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import ua.nure.botsula.dao.RoleDao;
+import ua.nure.botsula.model.Role;
 
 import java.util.List;
 
@@ -14,7 +15,6 @@ import java.util.List;
 public class RoleServiceImpl implements RoleService {
 @Autowired
     private RoleDao roleDao;
-
 
     @Override
     public List<Role> findAll() {

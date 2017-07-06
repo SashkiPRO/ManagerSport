@@ -1,9 +1,10 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.dao.NewsDao;
-import net.proselyte.springsecurityapp.model.News;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import ua.nure.botsula.dao.NewsDao;
+import ua.nure.botsula.model.News;
 
 import java.util.List;
 

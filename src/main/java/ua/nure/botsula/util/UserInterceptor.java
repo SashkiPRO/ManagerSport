@@ -1,13 +1,14 @@
 package ua.nure.botsula.util;
 
-import net.proselyte.springsecurityapp.model.*;
-import net.proselyte.springsecurityapp.service.MessageService;
-import net.proselyte.springsecurityapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+import ua.nure.botsula.model.Message;
+import ua.nure.botsula.model.User;
+import ua.nure.botsula.service.MessageService;
+import ua.nure.botsula.service.UserService;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

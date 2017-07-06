@@ -1,8 +1,9 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.dao.DefaultImageDao;
-import net.proselyte.springsecurityapp.model.DefaultImage;
+
 import org.springframework.stereotype.Service;
+import ua.nure.botsula.dao.DefaultImageDao;
+import ua.nure.botsula.model.DefaultImage;
 
 /**
  * Created by Alexandr on 02.06.2017.

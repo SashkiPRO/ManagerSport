@@ -3,7 +3,7 @@ package ua.nure.botsula.service;
 /**
  * Service for Security.
  *
- * @author Eugene Suleimanov
+ * @author Aleskandr Botsula
  * @version 1.0
  */
 

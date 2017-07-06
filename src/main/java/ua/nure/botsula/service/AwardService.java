@@ -1,6 +1,8 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.model.Award;
+
+
+import ua.nure.botsula.model.Award;
 
 import java.util.List;
 

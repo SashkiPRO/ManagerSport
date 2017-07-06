@@ -1,6 +1,7 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.model.Contract;
+
+import ua.nure.botsula.model.Contract;
 
 import java.util.List;
 
@@ -11,5 +12,4 @@ public interface ContractService {
     Contract findContractById(Long id);
     List<Contract> findAll();
     void save(Contract contract);
-    System.out.println();
 }

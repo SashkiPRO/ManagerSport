@@ -1,11 +1,5 @@
 package ua.nure.botsula.controller;
 
-import net.proselyte.springsecurityapp.dao.MessageDao;
-import net.proselyte.springsecurityapp.model.Message;
-import net.proselyte.springsecurityapp.model.User;
-import net.proselyte.springsecurityapp.service.MessageService;
-import net.proselyte.springsecurityapp.service.UserService;
-import net.proselyte.springsecurityapp.validator.PasswordValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +9,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+import ua.nure.botsula.dao.MessageDao;
+import ua.nure.botsula.model.Message;
+import ua.nure.botsula.model.User;
+import ua.nure.botsula.service.MessageService;
+import ua.nure.botsula.service.UserService;
+import ua.nure.botsula.validator.PasswordValidator;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;

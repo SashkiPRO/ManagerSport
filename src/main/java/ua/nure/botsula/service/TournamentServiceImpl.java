@@ -1,9 +1,9 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.dao.TournamentDao;
-import net.proselyte.springsecurityapp.model.Tournament;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import ua.nure.botsula.dao.TournamentDao;
+import ua.nure.botsula.model.Tournament;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ import java.util.List;
 @Service
 public class TournamentServiceImpl implements TournamentService{
     @Autowired
-  private   TournamentDao tournamentDao;
+  private TournamentDao tournamentDao;
 
     @Override
     public List<Tournament> findAll() {

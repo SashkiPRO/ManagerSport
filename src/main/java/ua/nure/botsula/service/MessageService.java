@@ -1,8 +1,10 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.model.Event;
-import net.proselyte.springsecurityapp.model.Message;
-import net.proselyte.springsecurityapp.model.User;
+
+
+import ua.nure.botsula.model.Event;
+import ua.nure.botsula.model.Message;
+import ua.nure.botsula.model.User;
 
 import java.util.List;
 

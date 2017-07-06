@@ -1,7 +1,8 @@
 package ua.nure.botsula.dao;
 
-import net.proselyte.springsecurityapp.model.Salary;
+
 import org.springframework.data.jpa.repository.JpaRepository;
+import ua.nure.botsula.model.Salary;
 
 /**
  * Created by Alexandr on 14.06.2017.

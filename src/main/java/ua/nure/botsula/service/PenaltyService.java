@@ -1,6 +1,8 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.model.Penalty;
+
+
+import ua.nure.botsula.model.Penalty;
 
 import java.util.List;
 

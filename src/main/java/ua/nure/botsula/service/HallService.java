@@ -1,6 +1,8 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.model.Hall;
+
+
+import ua.nure.botsula.model.Hall;
 
 import java.util.List;
 

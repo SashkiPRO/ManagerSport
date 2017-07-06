@@ -1,7 +1,8 @@
 package ua.nure.botsula.util;
 
-import net.proselyte.springsecurityapp.model.Message;
-import net.proselyte.springsecurityapp.model.User;
+
+import ua.nure.botsula.model.Message;
+import ua.nure.botsula.model.User;
 
 import java.util.Iterator;
 

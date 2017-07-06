@@ -1,6 +1,7 @@
 package ua.nure.botsula.util;
 
-import net.proselyte.springsecurityapp.model.Salary;
+
+import ua.nure.botsula.model.Salary;
 
 import java.util.List;
 

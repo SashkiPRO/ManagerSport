@@ -1,18 +1,19 @@
 package ua.nure.botsula.validator;
 
-import net.proselyte.springsecurityapp.model.User;
-import net.proselyte.springsecurityapp.service.UserService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
+import ua.nure.botsula.model.User;
+import ua.nure.botsula.service.UserService;
 
 /**
- * Validator for {@link net.proselyte.springsecurityapp.model.User} class,
+ * Validator for {@link ua.nure.botsula.model.User } class,
  * implements {@link Validator} interface.
  *
- * @author Eugene Suleimanov
+ * @author Alkesandr Botsula
  * @version 1.0
  */
 

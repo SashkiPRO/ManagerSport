@@ -1,22 +1,22 @@
 package ua.nure.botsula.controller;
 
-import net.proselyte.springsecurityapp.model.*;
-import net.proselyte.springsecurityapp.service.*;
-import net.proselyte.springsecurityapp.util.TableCreator;
-import net.proselyte.springsecurityapp.validator.UserValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import ua.nure.botsula.model.*;
+import ua.nure.botsula.service.*;
+import ua.nure.botsula.util.TableCreator;
+import ua.nure.botsula.validator.UserValidator;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
 /**
- * Controller for {@link net.proselyte.springsecurityapp.model.User}'s pages.
+ * Controller for {@link ua.nure.botsula.model.User}'s pages.
  *
  * @author Aleksandr Botsula
  * @version 1.0
@@ -162,7 +162,7 @@ public class UserController {
     }
 
     @RequestMapping(value = "/admin_cabinet", method = RequestMethod.GET)
-    public String adminCabinet(Model model){
+    public String adminCabinet(Model model) {
         return "admin/admin_info";
     }
 

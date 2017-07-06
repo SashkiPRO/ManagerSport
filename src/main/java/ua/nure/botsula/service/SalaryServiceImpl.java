@@ -1,9 +1,9 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.dao.SalaryDao;
-import net.proselyte.springsecurityapp.model.Salary;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import ua.nure.botsula.dao.SalaryDao;
+import ua.nure.botsula.model.Salary;
 
 import java.util.List;
 

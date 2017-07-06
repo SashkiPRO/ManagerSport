@@ -1,7 +1,8 @@
 package ua.nure.botsula.dao;
 
-import net.proselyte.springsecurityapp.model.Game;
+
 import org.springframework.data.jpa.repository.JpaRepository;
+import ua.nure.botsula.model.Game;
 
 import java.util.List;
 

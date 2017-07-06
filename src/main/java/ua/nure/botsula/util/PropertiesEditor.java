@@ -1,9 +1,9 @@
 package ua.nure.botsula.util;
 
-import net.proselyte.springsecurityapp.model.Team;
-import net.proselyte.springsecurityapp.service.TeamService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import ua.nure.botsula.model.Team;
+import ua.nure.botsula.service.TeamService;
 
 import java.beans.PropertyEditorSupport;
 

@@ -1,9 +1,10 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.dao.ReplenishmentDao;
-import net.proselyte.springsecurityapp.model.Replenishment;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import ua.nure.botsula.dao.ReplenishmentDao;
+import ua.nure.botsula.model.Replenishment;
 
 import java.util.List;
 

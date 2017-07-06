@@ -1,7 +1,8 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.model.Player;
-import net.proselyte.springsecurityapp.model.Team;
+
+import ua.nure.botsula.model.Player;
+import ua.nure.botsula.model.Team;
 
 import java.util.List;
 

@@ -1,9 +1,9 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.dao.PenaltyDao;
-import net.proselyte.springsecurityapp.model.Penalty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import ua.nure.botsula.dao.PenaltyDao;
+import ua.nure.botsula.model.Penalty;
 
 import java.util.List;
 

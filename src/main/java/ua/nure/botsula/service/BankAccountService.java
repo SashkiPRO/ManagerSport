@@ -1,6 +1,8 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.model.BankAccount;
+
+
+import ua.nure.botsula.model.BankAccount;
 
 import java.util.List;
 

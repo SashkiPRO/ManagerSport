@@ -1,9 +1,9 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.dao.PaymentDao;
-import net.proselyte.springsecurityapp.model.Payment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import ua.nure.botsula.dao.PaymentDao;
+import ua.nure.botsula.model.Payment;
 
 import java.util.List;
 

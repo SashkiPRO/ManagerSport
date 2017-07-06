@@ -1,10 +1,10 @@
 package ua.nure.botsula.util;
 
 
-import net.proselyte.springsecurityapp.model.Role;
-import net.proselyte.springsecurityapp.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import ua.nure.botsula.model.Role;
+import ua.nure.botsula.service.RoleService;
 
 /**
  * Created by Alexandr on 05.06.2017.

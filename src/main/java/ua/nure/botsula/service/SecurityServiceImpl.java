@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 /**
  * Implementation of {@link SecurityService} interface.
  *
- * @author Eugene Suleimanov
+ * @author Aleksandr Botsula
  * @version 1.0
  */
 

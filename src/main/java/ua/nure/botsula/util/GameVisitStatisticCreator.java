@@ -1,11 +1,11 @@
 package ua.nure.botsula.util;
 
 
+import ua.nure.botsula.model.User;
+
 /**
  * Created by Alexandr on 12.06.2017.
  */
-
-import net.proselyte.springsecurityapp.model.User;
 
 public class GameVisitStatisticCreator {
    private User user;

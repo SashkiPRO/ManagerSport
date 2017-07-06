@@ -1,9 +1,10 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.dao.ContractDao;
-import net.proselyte.springsecurityapp.model.Contract;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import ua.nure.botsula.dao.ContractDao;
+import ua.nure.botsula.model.Contract;
 
 import java.util.List;
 

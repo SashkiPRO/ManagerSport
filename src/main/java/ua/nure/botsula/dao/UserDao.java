@@ -1,7 +1,8 @@
 package ua.nure.botsula.dao;
 
-import net.proselyte.springsecurityapp.model.User;
+
 import org.springframework.data.jpa.repository.JpaRepository;
+import ua.nure.botsula.model.User;
 
 public interface UserDao extends JpaRepository<User, Long> {
     User findByLogin(String login);

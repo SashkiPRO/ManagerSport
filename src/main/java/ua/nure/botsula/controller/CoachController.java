@@ -1,9 +1,6 @@
 package ua.nure.botsula.controller;
 
-import net.proselyte.springsecurityapp.model.*;
-import net.proselyte.springsecurityapp.service.*;
-import net.proselyte.springsecurityapp.util.*;
-import net.proselyte.springsecurityapp.validator.PasswordValidator;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +8,12 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import ua.nure.botsula.model.*;
+import ua.nure.botsula.service.*;
+import ua.nure.botsula.util.EventPropertiesEditor;
+import ua.nure.botsula.util.GameVisitStatisticCreator;
+import ua.nure.botsula.util.HallPropertiesEditor;
+import ua.nure.botsula.validator.PasswordValidator;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;

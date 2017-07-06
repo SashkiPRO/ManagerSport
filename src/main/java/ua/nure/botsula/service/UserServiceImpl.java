@@ -1,19 +1,20 @@
 package ua.nure.botsula.service;
 
-import net.proselyte.springsecurityapp.dao.RoleDao;
-import net.proselyte.springsecurityapp.dao.UserDao;
-import net.proselyte.springsecurityapp.model.User;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ua.nure.botsula.dao.RoleDao;
+import ua.nure.botsula.dao.UserDao;
+import ua.nure.botsula.model.User;
 
 import java.util.List;
 
 /**
  * Implementation of {@link UserService} interface.
  *
- * @author Eugene Suleimanov
+ * @author Aleksandr Botsula
  * @version 1.0
  */
 

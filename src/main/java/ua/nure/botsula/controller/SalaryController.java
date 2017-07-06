@@ -1,9 +1,6 @@
 package ua.nure.botsula.controller;
 
-import net.proselyte.springsecurityapp.model.*;
-import net.proselyte.springsecurityapp.service.*;
-import net.proselyte.springsecurityapp.util.EventPropertiesEditor;
-import net.proselyte.springsecurityapp.util.SalaryContainer;
+
 import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,6 +10,10 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import ua.nure.botsula.model.*;
+import ua.nure.botsula.service.*;
+import ua.nure.botsula.util.EventPropertiesEditor;
+import ua.nure.botsula.util.SalaryContainer;
 
 import java.util.ArrayList;
 import java.util.List;

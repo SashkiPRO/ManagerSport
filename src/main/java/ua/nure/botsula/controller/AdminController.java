@@ -1,13 +1,5 @@
 package ua.nure.botsula.controller;
 
-import net.proselyte.springsecurityapp.model.*;
-import net.proselyte.springsecurityapp.service.NewsService;
-import net.proselyte.springsecurityapp.service.RoleService;
-import net.proselyte.springsecurityapp.service.UserService;
-import net.proselyte.springsecurityapp.util.Renamer;
-import net.proselyte.springsecurityapp.util.RolePropetiesEditor;
-import net.proselyte.springsecurityapp.validator.PasswordValidator;
-import net.proselyte.springsecurityapp.validator.UserValidator;
 import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
@@ -20,6 +12,16 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.support.ByteArrayMultipartFileEditor;
+import ua.nure.botsula.model.News;
+import ua.nure.botsula.model.Role;
+import ua.nure.botsula.model.User;
+import ua.nure.botsula.service.NewsService;
+import ua.nure.botsula.service.RoleService;
+import ua.nure.botsula.service.UserService;
+import ua.nure.botsula.util.Renamer;
+import ua.nure.botsula.util.RolePropetiesEditor;
+import ua.nure.botsula.validator.PasswordValidator;
+import ua.nure.botsula.validator.UserValidator;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;

@@ -5,12 +5,12 @@ package ua.nure.botsula.servlets;
  */
 
 
-import net.proselyte.springsecurityapp.model.DefaultImage;
-import net.proselyte.springsecurityapp.model.SystemFacade;
-import net.proselyte.springsecurityapp.service.SecurityService;
-import net.proselyte.springsecurityapp.service.UserService;
-import net.proselyte.springsecurityapp.validator.UserValidator;
 import org.springframework.beans.factory.annotation.Autowired;
+import ua.nure.botsula.model.DefaultImage;
+import ua.nure.botsula.model.SystemFacade;
+import ua.nure.botsula.service.SecurityService;
+import ua.nure.botsula.service.UserService;
+import ua.nure.botsula.validator.UserValidator;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
